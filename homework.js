@@ -20,12 +20,10 @@ function greeting(name) {
 
 
 function isOdd(num) {
-    if (num % 2 === 1) {
-        return true; 
-    } else if (num % 2 === -1) {
-    return true; 
+    if (num % 2 === 1 || num % 2 === -1) {
+        return true
     } else {
-    return false;
+    return false
     }
 }
 
@@ -47,9 +45,17 @@ function isEven(num) {
 // Fahrenheit temperature as an argument and returns the
 // temperature in Celsius.
 
+function fahrenheitToCelsius(Fnum) {
+    return ((Fnum - 32) * 5/9)
+}
+
 // 7. Create a function called celsiusToFahrenheit that takes a
 // Celsius temperature as an argument and returns the
 // temperature in Fahrenheit.
+
+function celsiusToFahrenheit(Cnum) {
+    return ((Cnum * 9/5) + 32)
+}
 
 // 8. Create a function called fahrenheitToKelvin that takes a
 // Fahrenheit temperature as an argument and returns the
@@ -58,9 +64,21 @@ function isEven(num) {
 // Absolute zero (0 K) is equivalent to −273.15 C.
 // 1 degree Kelvin equals 1 degree Celsius.
 
+function fahrenheitToKelvin(Fnum) {
+    return fahrenheitToCelsius(Fnum) + 273.15
+}
+
 // 9. Create a function called lesser that takes two numbers as
 // arguments and returns the lesser of them. This function should
 // use an if/else statement.
+
+function lesser(num1, num2) {
+    if (num1 < num2) {
+    return num1
+    } else {
+    return num2
+    }
+}
 
 // 10. Create a function called multigreeting that takes a name
 // and a language code and returns a version of "Hello, <name>!"
